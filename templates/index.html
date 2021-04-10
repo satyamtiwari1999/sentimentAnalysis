@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+
+
+    <!-- show the mood status -->
+    {% if mood %}
+        <h1> {{mood}} </h1>
+    {% endif %}
+
+    <!-- user mood input field -->
+    <form action="/" method="POST">
+        <input type="text" name="user_response" id="response" placeholder="What's on your mind ?">
+        <button type="submit">Reflect My Mood !</button>
+    </form>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
