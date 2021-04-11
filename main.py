@@ -68,8 +68,8 @@ def home():
         # find the mood from the response got from the user
         m = ModelUtils(logi_model, logi_tokens, response)
         # use the keras model for sentiment analysis and then run it here
-        mood = "That's Great" if m.pred[0] else "You seem to be in a bad mood!!"
-    return render_template('index.html', mood=mood)
+        mood = "Someone is jumping with joy today!" if m.pred[0] else "You seem to be in a bad mood!!"
+    return render_template('index.html', mood=mood, resp=m.pred[0])
 
 
 if __name__ == '__main__':

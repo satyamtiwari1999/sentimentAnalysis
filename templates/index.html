@@ -10,8 +10,6 @@
     <title>Mood Analysis</title>
 </head>
 <body>
-    <header></header>
-
     <div id="banner">
         <div id="upper-vac"></div>
         <div id="quote">
@@ -28,7 +26,11 @@
 
     <!-- user mood input field -->
     <div id="form-container">
-        <img src="{{url_for('static', filename='emoji.png')}}" alt="">
+        {% if resp == 0 %}
+            <img src="{{url_for('static', filename='sadEmoji.png')}}" alt="">
+        {% else %}
+            <img src="{{url_for('static', filename='emoji.png')}}" alt="">
+        {% endif %}
         <form action="/" method="POST">
             <input type="text" name="user_response" id="response" placeholder="What's on your mind ?">
             <br>

@@ -18,6 +18,7 @@ body
     background-size: contain;
     height: 700px;
     bottom: 0;
+    margin-bottom: 30px;
 }
 #upper-vac
 {
@@ -38,7 +39,15 @@ body
 {
     margin-top: 0px;
     margin-bottom: 50px;
+    height: 100px;
+    width: 100%;
     text-align: center;
+    background-image: url(cloud.jpg);
+    background-position:center;
+    background-repeat:round;
+    background-size: contain;
+    line-height: 100px;
+    background-blend-mode:color;
 }
 
 /* form part */
