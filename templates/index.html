@@ -4,25 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <title>Mood Analysis</title>
 </head>
 <body>
     <header></header>
 
+    <div id="banner">
+        <div id="upper-vac"></div>
+        <div id="quote">
+            “ <br> The greatest happiness you can have is knowing that you do not necessarily require happiness.<br> ”
+            <br><br> – William Saroyan
+        </div>
+    </div>
+    
 
     <!-- show the mood status -->
     {% if mood %}
-        <h1> {{mood}} </h1>
+        <h1 id="mood"> {{mood}} </h1>
     {% endif %}
 
     <!-- user mood input field -->
-    <form action="/" method="POST">
-        <input type="text" name="user_response" id="response" placeholder="What's on your mind ?">
-        <button type="submit">Reflect My Mood !</button>
-    </form>
+    <div id="form-container">
+        <img src="{{url_for('static', filename='emoji.png')}}" alt="">
+        <form action="/" method="POST">
+            <input type="text" name="user_response" id="response" placeholder="What's on your mind ?">
+            <br>
+            <button type="submit">Check Your Mood !!</button>
+        </form>
+    </div>
+    
 
     <footer>
-
+        <img id="logo" src="{{url_for('static', filename='Codetu1.png')}}" alt="logo">
+        <ul>
+            <li>Satyam Tiwari</li>
+            <li>satyammtiwarii@gmail.com</li>
+            <li>+91-8750192989</li>
+        </ul>
     </footer>
 </body>
 </html>
